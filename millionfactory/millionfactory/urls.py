@@ -19,4 +19,12 @@ from justatest.views import FactoriesViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(
+        "api/factories/",
+        FactoriesViewSet.as_view(
+            {
+                'get': 'list',
+            }
+        ),
+    ),
 ]
